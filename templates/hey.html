@@ -1,0 +1,39 @@
+<h1># info-country</h1>
+<h2>&#127462;&#127473;</h2>
+<p>nombre habitants: 9874689476 </p>
+
+<h2>Nom de mon snack</h2>
+<p>user id : 1</p>
+<p>Snack Sandwich</p>
+<p>sandwichs</p>
+<table id="mytable">
+
+</table>
+<script>
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+window.onload=function(){
+var myrow="";
+var date = new Date(2009, 10, 10);  // 2009-11-10
+var month = date.toLocaleString('default', { month: 'long' });
+console.log(month);
+myrow+="<tr>"
+for (var i=0;i<11;i++){
+date = new Date(2009, (i+1), 10);  // 2009-11-10
+month = date.toLocaleString('default', { month: 'long' });
+console.log(month);
+myrow+="<td>"+month+"</td>";
+}
+myrow+="</tr>"
+myrow+="<tr>"
+for (var i=0;i<11;i++){
+myrow+="<td>";
+myrow+=String(getRandomInt(2000));
+myrow+="</td>";
+}
+myrow+="</tr>"
+mytable.innerHTML+=myrow;
+
+}
+</script>
